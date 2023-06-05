@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import InputComponent from './Features/InputComponent';
-import reportWebVitals from './reportWebVitals';
+import InputComponent from './InputComponent';
 import r2wc from "@r2wc/react-to-web-component"
 
 

@@ -1,0 +1,27 @@
+
+
+.centered-element{
+    align-items: center;
+   
+    background-color: #fff;
+    display: flex;
+
+    
+  
+      > img {
+        margin-left: 10px;
+      }
+
+    
+      
+}
+.centered-elementError{
+    display: flex;
+    align-items: center;
+    > p {
+        align-items: center;
+        color: #ff0000;
+        margin-left: 8px;
+      }
+      
+  }
