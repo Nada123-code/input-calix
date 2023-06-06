@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import r2wc from "@r2wc/react-to-web-component"
 
 
-const calixInput = r2wc(InputComponent,{props:['value','label','error_message']});
+const calixInput = r2wc(InputComponent,{props:['label','error_message','type','hint']});
 
 customElements.define("calix-input", calixInput)
 

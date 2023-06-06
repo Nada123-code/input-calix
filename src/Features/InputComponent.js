@@ -1,5 +1,7 @@
 import * as React from "react";
 import "./InputComponent.scss";
+import PropTypes from 'prop-types';
+
 import Icon from "../assets/icons/icon.png";
 import ErrorIcon from "../assets/icons/ErrorIcon.png";
 export default function InputComponent(props) {
@@ -22,6 +24,7 @@ export default function InputComponent(props) {
         <br />
       </div>
       <input
+       data-testid="input"
         onBlur={addPrefix}
         placeholder={props.placeholder}
         type={props.type}
@@ -30,17 +33,28 @@ export default function InputComponent(props) {
         onChange={format_text}
       
       />
-      <div className="centered-elementError">
+       <div>
+        <small className="hint">{props.hint}</small>
+       </div>
+     
+     
         {value.length === 0 ? (
-          <>
-            <img src={ErrorIcon} alt="" width="15px" height="15px" />
-            <p>{props.error_message}</p>
-          </>
+          <div  className="centered-elementError">
+            <img src={ErrorIcon} alt="" width="10px" height="10px" />
+            <h5>{props.error_message}</h5>
+          </div>
         ) : (
           null
         )}
-      </div>
+      
       
     </React.Fragment>
   );
 }
+
+InputComponent.propTypes = {
+  label: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  error_message: PropTypes.string.isRequired
+  
+};

@@ -16,12 +16,17 @@
       
 }
 .centered-elementError{
+  margin-top: -20px;
     display: flex;
     align-items: center;
-    > p {
+    > h5 {
         align-items: center;
         color: #ff0000;
-        margin-left: 8px;
+        margin-left: 10px;
       }
       
+  }
+
+  .hint {
+    color: rgb(75, 75, 75);
   }
